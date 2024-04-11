@@ -1,0 +1,56 @@
+
+# To loop the List/Tuple/Set/Data Dictionary
+
+lst  = [10,20,30,40,50]
+
+#length of List
+print("Length of list is: ", len(lst))
+
+#Using for loop
+for i in lst:
+    print("for loop: ", i)
+#Using for loop and range()
+for i in range(3):
+    print("for loop range of 3, value of i: ", i, " and value of lst[i]: " , lst[i])
+    
+#Using a while loop
+i=0
+while i<len(lst):
+    print("While Loop: value of i:",i, " and value of lst[i]: ", lst[i])
+    i += 1
+
+#Using list comprehension 
+[print("List Comprehension: value of lst[i]: ",i) for i in lst]
+
+#Using enumerate() method
+for i, val in enumerate(lst):
+    print("Enumrate: Value of i: ",i, " and value of lst[i]: " , val)
+
+#Using the iter function and the next function 
+iterator = iter(lst)
+
+try:
+    while True:
+        ele = next(iterator)
+        print("Iterator loop: Value of element: ", ele)
+        
+except StopIteration:
+    pass
+
+#Using the map() function
+def print_ele(ele):
+    print("Map and Element loop: Value of element: ", ele)
+result = map(print_ele, lst)
+
+for _ in result:
+    pass
+#Using zip() Function
+
+#Using NumPy module
+import numpy as test
+
+a = test.arange(16)
+a = a.reshape(4,4)
+
+for x in test.nditer(a):
+    print("Numpy loop: Value of x: ", x)
