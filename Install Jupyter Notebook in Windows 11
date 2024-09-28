@@ -1,0 +1,22 @@
+Pre-requisite -
+        - Install Python using steps provided in below Git repo -
+        https://github.com/devajaytayde/python_selenium/blob/main/Install%20Python%20on%20Windows%2011
+
+Installation of Jupyter Notebook -
+        - Go to "Start" menu and search for "Windows PowerShell"
+        - Right click on it and open with "Administrator Mode"
+        - Now go to Python installation folder for ex.
+                    C:\Users\<USER>\AppData\Local\Programs\Python
+        - Enter "cd /scripts/"
+        - Enter "./pip install jupyterlab" and it will start downloading "JupyterLab" in Python folder
+                    Note:- If above command gets error, try with below alternate command
+                      a. Go to back folder where "Python.exe" is available
+                      b. Enter "./python install notebook"
+        
+        - Enter "jupyter lab" to launch "JupyterLab" in default browser
+                    Note:- If above command not work, Select Localhost path provided in the PowerShell installation of Jupyter (like https://localhost:8889/JupyterNotebook)
+        - Go to any browser and enter above URL
+        - "Jupyter Notebook" is ready to use now
+
+More information provided here -
+https://jupyter.org/install
