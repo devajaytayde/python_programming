@@ -1,0 +1,7 @@
+Installation of Python in Windows 11 -
+
+1. Go https://www.python.org/downloads/
+2. Download Latest Python version 
+3. Go to "Downloads" folder and click on downloaded installable file
+4. After installation , go to below folder
+    C:\Users\<USER>\AppData\Local\Programs\Python
