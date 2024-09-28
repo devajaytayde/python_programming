@@ -8,7 +8,7 @@ Installation of Jupyter Notebook -
         - Now go to Python installation folder for ex.
                     C:\Users\<USER>\AppData\Local\Programs\Python
         - Enter "cd /scripts/"
-        - Enter "./pip install jupyterlab" and it will start downloading "JupyterLab" in Python folder
+        - Enter "./pip install notebook" and it will start downloading "Jupyter Notebook" in Python folder
                     Note:- If above command gets error, try with below alternate command
                       a. Go to back folder where "Python.exe" is available
                       b. Enter "./python install notebook"
