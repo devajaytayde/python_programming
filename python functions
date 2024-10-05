@@ -1,0 +1,16 @@
+Python functions-
+1. Without Parameters
+      def sub():
+          a = eval("enter value of length")
+          b = eval("enter value of weigth")
+          c = a*b
+          print(f"area of rectangle is"&c)
+
+
+
+2. With Parameters
+      def sub(a,b):
+          print(f" length is"&a)
+          b = eval("weigth is"&b)
+          c = a*b
+          print(f"area of rectangle is"c)
