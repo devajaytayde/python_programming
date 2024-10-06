@@ -14,7 +14,7 @@
   for i in range(1,10,2):
     print(i)
 
-
+*****Note - Default Start is 0, Default Step is 1, Stop is Mandatory******
 
 #For checking Even or Odd number
   for i in range(1, 10):
