@@ -1,1 +1,11 @@
+while <condition>:
+  increment or decrement
+
+
+#With Start Point
+i = 0 
+while i<=5:
+    print(i,end='')
+    i = i + 1
+
 
