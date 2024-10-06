@@ -25,13 +25,13 @@
 
 Problems - 
 #WAP for checking Even or Odd number
+#WAP User to enter number, if Random number match with user, User Won else Loss
+
+Solution -
+#WAP for checking Even or Odd number
   for i in range(1, 10):
       num = i%2
       if num==0:
         print(f"{num} is even")
       else:
         print(f"{num} is odd")
-
-
-#WAP User to enter number, if Random number match with user, User Won else Loss
-
