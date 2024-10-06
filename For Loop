@@ -33,4 +33,5 @@ Problems -
         print(f"{num} is odd")
 
 
+#WAP User to enter number, if Random number match with user, User Won else Loss
 
