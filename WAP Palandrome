@@ -1,0 +1,9 @@
+x=input("Enter string to check Palandrome : ")
+flag=True
+for i in range(len(x)):
+           if x[i] != x[-i-1]:
+                     flag=False
+if flag==False:
+	print("Oh Sad!, String """ ,x, " is Not Palandrome")
+else:
+	print("Hurrey! String", """,x, " is Palandrome")
