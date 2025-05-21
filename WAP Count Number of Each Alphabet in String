@@ -1,0 +1,5 @@
+x = "Hello World, I am writing program to Count Number of Each Alphabet in String"
+for i in range(65,123):
+  if i == 91 or i == 92 or i == 93 or i == 94 or i == 94 or i == 95 or i == 96:
+    continue
+  print(chr(i) ," is having total count :" , x.count(chr(i)))
