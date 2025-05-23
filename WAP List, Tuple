@@ -1,0 +1,20 @@
+#touple sort using list
+ tp = (5,1,7,4,9)
+ tp.sort()
+Traceback (most recent call last):
+  File "<python-input-174>", line 1, in <module>
+    tp.sort()
+    ^^^^^^^
+AttributeError: 'tuple' object has no attribute 'sort'
+ list(tp).sort()
+ tp
+(5, 1, 7, 4, 9)
+ lst = list(tp)
+ lst
+[5, 1, 7, 4, 9]
+ lst.sort()
+ lst
+[1, 4, 5, 7, 9]
+ tp = tuple(lst)
+ tp
+(1, 4, 5, 7, 9)
