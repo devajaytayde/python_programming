@@ -1,0 +1,33 @@
+#Full Pyramid of List items
+for i in range(len(lst)):
+  print('  '*(4-i),lst[:i+1])
+
+         [10]
+       [10, 20]
+     [10, 20, 30]
+   [10, 20, 30, 40]
+ [10, 20, 30, 40, 50]
+
+#Left Pyramid of List items
+for i in range(len(lst)):
+  print(lst[:i+1])
+
+[10]
+[10, 20]
+[10, 20, 30]
+[10, 20, 30, 40]
+[10, 20, 30, 40, 50]
+
+#Right Pyramid of List items
+for i in range(len(lst)):
+  print(lst[0:5-i])
+
+[10, 20, 30, 40, 50]
+[10, 20, 30, 40]
+[10, 20, 30]
+[10, 20]
+[10]
+
+
+
+
