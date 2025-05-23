@@ -1,1 +1,12 @@
+#Default file folder is the one where python.exe  is stored
+#For ex. C:\Users\<Username>\AppData\Local\Programs\Python\Python313
 
+#Read file
+f = open('NEWS.txt','r')
+for i in range(1,10):
+  l = f.readline()
+  print(l[:-1])
+
+
+
+#Write file
