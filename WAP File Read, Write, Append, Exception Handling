@@ -19,7 +19,7 @@ or going into sub-folder for ex. 'demo' and open inner file
 
 fl = open('demo/temp1.txt','r')
 
-#Write file
+#Write file - writeline is a function name which can be anything 
 
 with open("text5.txt","w") as writeline:
   writeline.write("this is line")          #without new line feed
