@@ -25,6 +25,11 @@ with open("text5.txt","w") as writeline:
   writeline.write("this is line")          #without new line feed
   writeline.write("this is line 2\n")      #with new line
 
+with open("text5.txt","a") as writefunction:
+  for i in range (10):
+    writefunction.write( str(i))
+
+
 
 #Append file
 
