@@ -36,3 +36,18 @@ with open("text5.txt","a") as writefunction:
 with open("text5.txt","a") as writeline:
   writeline.write("this is line 3\n")          
   writeline.write("this is line 4\n")      
+
+
+
+#Expection Handling
+#1. When file creation time, file already exists
+
+
+
+#2. When file reading time, file not exists
+try:
+  f = open("text6.txt","r")
+except FileNotFoundError:
+  print("No such file exists")
+
+
