@@ -1,0 +1,10 @@
+import datetime
+
+#1. Date received in local format like DD-MM-YYYY and convert to DD-MM-YYYY THH:MM:SS or DD-MMM-YYY or MM-DD-YYYY
+dtInput = '12-12-2025'
+
+#a. UTC format 
+
+
+
+#2. Day of the date
