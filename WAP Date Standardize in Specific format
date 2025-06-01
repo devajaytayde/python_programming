@@ -19,7 +19,8 @@ print("Date is :") ; print(dd,mm,yyyy,sep="/")
 
 
 #2. Day of the date
-
+dtNow = datetime.datetime.now()
+print("Day is :", dtNow
 
 ----- Datetime Conversion Chart ---- 
 
