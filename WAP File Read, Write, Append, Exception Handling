@@ -12,6 +12,20 @@ fo = open('NEWS.txt','r')
 lst = fo.readline() #run only once
 
 or
+with open("tc_keyword.csv",'r') as file:
+  content = file.read()
+print(content)
+
+
+
+#Read file one by one
+with open("tc_keyword.csv",'r') as file:
+  for line in file:
+    print(line) # or print(line.strip()) to remove extra line break
+
+
+
+or
 
 lst = fo.read()
 
