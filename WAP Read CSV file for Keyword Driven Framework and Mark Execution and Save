@@ -28,3 +28,7 @@ with open("tc_keyword.csv","r") as file:
         strExecution = strTestCasesSep.join(lst)
       else:
         strExecution = strExecution + '\n' + strTestCasesSep.join(lst)
+
+#Erasing older file content and Writing the updated Test Cases back to original file
+with open("tc_keyword.csv","w") as file2:
+  file2.writelines(strExecution)
