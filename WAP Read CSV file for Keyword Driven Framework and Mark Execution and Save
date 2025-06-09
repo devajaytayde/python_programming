@@ -1,1 +1,14 @@
+#1. Read Test Case file from local folder and print
+with open("tc_keyword.csv","r") as file:
+  for line in file:
+  print(line.strip())
+
+#Below is the output of the 1st program
+#TC_ID,TC_Name,Executed,TestSteps,Keyword,ObjectName,ObjectType,Value
+#1,Open Google Page,N,Step1,OpenBrowser,,www.google.com
+#,,N,Step2,Enter search keyword,txt_search,Atyeti
+#,,N,Step3,Click on Text,link_text,Welcome to Atyeti
+#,,N,Step3,Click on Text,link_text,Welcome to Atyeti
+#,,N,Step4,Close Browser,,
+
 
