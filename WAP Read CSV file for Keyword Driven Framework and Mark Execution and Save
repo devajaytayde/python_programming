@@ -13,14 +13,18 @@ TC_ID,TC_Name,Y,TestSteps,Keyword,ObjectName,ObjectType,Value
 
 #2. Read Test Case file from local folder and mark "Executed" column as "Y"
 
-#2.1 Read Test Case file line by line 
+#Declaring global variable 
+strExecution = ""
+iColExecuted = 2
+
+#Reading Test case file
 with open("tc_keyword.csv","r") as file:
   for line in file:
     if line != '\n':            
       # Convert Change list value of "Executed" column to "Y" and store in local String variable again   
       lst = line.strip().split(",")
       lst[iColExecuted] = 'Y'
-      strExecution = strTestCasesSep.join(lst)
-
-
-
+      if strExecution == '':
+        strExecution = strTestCasesSep.join(lst)
+      else:
+        strExecution = strExecution + '\n' + strTestCasesSep.join(lst)
