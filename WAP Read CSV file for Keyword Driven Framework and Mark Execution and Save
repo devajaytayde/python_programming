@@ -3,7 +3,8 @@ with open("tc_keyword.csv","r") as file:
   for line in file:
     print(line.strip())
 
-#Below is the output of the 1st programTC_ID,TC_Name,Y,TestSteps,Keyword,ObjectName,ObjectType,Value
+#Below is the output of the 1st program
+TC_ID,TC_Name,Y,TestSteps,Keyword,ObjectName,ObjectType,Value
 1,Open Google Page,Y,Step1,OpenBrowser,,www.google.com
 ,,Y,Step2,Enter search keyword,txt_search,Atyeti
 ,,Y,Step3,Click on Text,link_text,Welcome to Atyeti
