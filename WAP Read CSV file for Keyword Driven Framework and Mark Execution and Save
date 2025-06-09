@@ -4,26 +4,28 @@ with open("tc_keyword.csv","r") as file:
     print(line.strip())
 
 #Below is the output of the 1st program
-TC_ID,TC_Name,Y,TestSteps,Keyword,ObjectName,ObjectType,Value
-1,Open Google Page,Y,Step1,OpenBrowser,,www.google.com
-,,Y,Step2,Enter search keyword,txt_search,Atyeti
-,,Y,Step3,Click on Text,link_text,Welcome to Atyeti
-,,Y,Step3,Click on Text,link_text,Welcome to Atyeti
-,,Y,Step4,Close Browser,,
+TC_ID,TC_Name,Executed,TestSteps,Keyword,ObjectName,ObjectType,Value
+1,Open Google Page,N,Step1,OpenBrowser,,www.google.com
+,,N,Step2,Enter search keyword,txt_search,Atyeti
+,,N,Step3,Click on Text,link_text,Welcome to Atyeti
+,,N,Step3,Click on Text,link_text,Welcome to Atyeti
+,,N,Step4,Close Browser,,
 
 #2. Read Test Case file from local folder and mark "Executed" column as "Y"
 
 #Declaring global variable 
 strExecution = ""
 iColExecuted = 2
-
+iStepCounter = 0
 #Reading Test case file
 with open("tc_keyword.csv","r") as file:
   for line in file:
     if line != '\n':            
       # Convert Change list value of "Executed" column to "Y" and store in local String variable again   
       lst = line.strip().split(",")
-      lst[iColExecuted] = 'Y'
+      stepCounter = stepCounter + 1
+      if stepCounter > 1:
+        lst[iColExecuted] = 'Y'
       if strExecution == '':
         strExecution = strTestCasesSep.join(lst)
       else:
@@ -32,3 +34,4 @@ with open("tc_keyword.csv","r") as file:
 #Erasing older file content and Writing the updated Test Cases back to original file
 with open("tc_keyword.csv","w") as file2:
   file2.writelines(strExecution)
+
