@@ -1,7 +1,7 @@
 #1. Read Test Case file from local folder and print
 with open("tc_keyword.csv","r") as file:
   for line in file:
-  print(line.strip())
+    print(line.strip())
 
 #Below is the output of the 1st program
 #TC_ID,TC_Name,Executed,TestSteps,Keyword,ObjectName,ObjectType,Value
@@ -10,5 +10,17 @@ with open("tc_keyword.csv","r") as file:
 #,,N,Step3,Click on Text,link_text,Welcome to Atyeti
 #,,N,Step3,Click on Text,link_text,Welcome to Atyeti
 #,,N,Step4,Close Browser,,
+
+#2. Read Test Case file from local folder and mark "Executed" column as "Y"
+
+#2.1 Read Test Case file line by line 
+with open("tc_keyword.csv","r") as file:
+  for line in file:
+    if line != '\n':            
+      # Convert Change list value of "Executed" column to "Y" and store in local String variable again   
+      lst = line.strip().split(",")
+      lst[iColExecuted] = 'Y'
+      strExecution = strTestCasesSep.join(lst)
+
 
 
