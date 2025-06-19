@@ -4,12 +4,25 @@ iColExecuted = 2
 iStepCounter = 0
 strTestCasesSep = ','
 strExecutionStatusValue = input("What is Latest Execution Status to update in Test Case file: ")
+bRemoveDuplicate  = False
+strSourceFileName = 'tc_keywor1d.csv'
+
+try:
+    with open(strSourceFileName, "r") as file:
+        data = file.read()
+except FileNotFoundError:
+    print("Not found")
 
 #1. Read Test Case file from local folder and print
 print("*"*20, "Original File before update", "*"*20)
-with open("tc_keyword.csv","r") as file:
-  for line in file:
-    print(line.strip())
+try:
+	with open(strSourceFileName,"r") as file:
+		for line in file:
+			1==1
+			##TempComment##print(line.strip())
+except FileNotFoundError:
+	print("No such file ", strSourceFileName ," found")
+
 
 #Below is the output of the 1st program
 #TC_ID,TC_Name,Executed,TestSteps,Keyword,ObjectName,ObjectType,Value
@@ -20,7 +33,7 @@ with open("tc_keyword.csv","r") as file:
 #,,N,Step4,Close Browser,,
 
 #2. Reading Test case file
-with open("tc_keyword.csv","r") as file:
+with open(strSourceFileName,"r") as file:
   for line in file:
     if line != '\n':            
       # Convert Change list value of "Executed" column to "Y" and store in local String variable again   
@@ -33,14 +46,79 @@ with open("tc_keyword.csv","r") as file:
       else:
         strExecution = strExecution + '\n' + strTestCasesSep.join(lst)
 
-#3.Erasing older file content and Writing the updated Test Cases back to original file
-with open("tc_keyword.csv","w") as file2:
+#3. Erasing older file content and Writing the updated Test Cases back to original file
+with open(strSourceFileName,"w") as file2:
   file2.writelines(strExecution)
 
 
 
 #4. Read Test Case file from local folder and print
 print("\n**********Updated File after Execution status update**********")
-with open("tc_keyword.csv","r") as file:
-  for line in file:
-    print(line.strip())
+with open(strSourceFileName,"r") as file:
+	for line in file:
+		1==1
+		##TempComment##print(line.strip())
+
+
+#5.a Count occurance of a line from Original file in Similar file
+# Count "XYZ" is 3 times in file1 , then replace 
+# Count "ABC" is 1 time in file1, then do not make in count
+
+#5.b
+
+
+# 6a. Check if anamoly found for duplicate rows in Test Cases 
+
+# a. Open existing file and keep pointer row by row 
+
+#with open(strSourceFileName ,"r") as orgfile:
+#	for orgline in orgfile:
+#		print (orgline)
+#
+#		# Open existing file in second loop to compare file1 to file2 if found, keep its line number
+#		with open(strSourceFileName ,"r") as compfile:
+#			for compline in compfile:
+#				print(compline)
+#				if orgline == compline:
+#					bRemoveDuplicate = True
+
+
+# 6a. Own logic for duplicate removal
+def remove_duplicate_logic (infile, outfile):
+    print("Logic Based Duplicate function removal started")
+    
+    with open(infile, 'r', newline='', encoding='utf-8') as inputfile, open(outfile, 'w', newline='', encoding='utf-8') as outputfile:
+        
+        for row in reader:
+            row_tuple = tuple(row)  
+            if row_tuple not in seen:
+                print(row)
+                writer.writerow(row)
+                seen.add(row_tuple)
+
+
+# 6b. Co-poilet generated code for duplicate removal
+import csv
+def remove_duplicate_co_piolet(infile, outfile):
+    print("Co-Piolet based Duplicate function removal started")
+    seen = set()
+    with open(infile, 'r', newline='', encoding='utf-8') as inputfile, open(outfile, 'w', newline='', encoding='utf-8') as outputfile:
+        reader = csv.reader(inputfile)
+        writer = csv.writer(outputfile)
+        for row in reader:
+            row_tuple = tuple(row)  
+            if row_tuple not in seen:
+                print(row)
+                writer.writerow(row)
+                seen.add(row_tuple)
+
+#if bRemoveDuplicate == True:
+bRemoveDuplicate = input("Do you want to remove duplicate by Co-piolet ? Y/N: ")
+
+# Call duplicate function to remove duplicate rows
+infile='TC_Keyword.csv'
+outfile = 'TC_Keyword_Out.csv'
+if bRemoveDuplicate.upper() == 'N' or bRemoveDuplicate.upper() == 'NO' :
+	remove_duplicate_logic(infile,outfile)
+elif bRemoveDuplicate.upper() == 'Y' or bRemoveDuplicate.upper() == 'YES':
+	remove_duplicate_co_piolet(infile, outfile)	
