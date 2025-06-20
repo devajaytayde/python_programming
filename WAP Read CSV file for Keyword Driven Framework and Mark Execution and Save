@@ -17,7 +17,7 @@ except FileNotFoundError:
 print("*"*20, "Original File before update", "*"*20)
 try:
 	with open(strSourceFileName,"r") as file:
-		for line in file:
+		for line in file: 
 			1==1
 			##TempComment##print(line.strip())
 except FileNotFoundError:
