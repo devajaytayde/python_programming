@@ -60,18 +60,18 @@ with open(strSourceFileName,"r") as file:
 		##TempComment##print(line.strip())
 
 
+
 #5.a Count occurance of a line from Original file in Similar file
 # Count "XYZ" is 3 times in file1 , then replace 
 # Count "ABC" is 1 time in file1, then do not make in count
 
-#5.b
-
+#5.b Note 
 
 # 6a. Check if anamoly found for duplicate rows in Test Cases 
 
 # a. Open existing file and keep pointer row by row 
 
-#with open(strSourceFileName ,"r") as orgfile:
+# with open(strSourceFileName ,"r") as orgfile:
 #	for orgline in orgfile:
 #		print (orgline)
 #
