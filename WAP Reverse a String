@@ -17,3 +17,8 @@ rev=""
 stack = list(str)
 for i in range(0, 5):
   rev = rev+stack.pop()
+
+#Using for and reversed function:
+rev = ""
+for char in reversed(str):
+  rev = rev + char
