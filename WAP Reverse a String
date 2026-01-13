@@ -1,0 +1,19 @@
+str = "ABCDE"
+
+#Reverse via For Loop
+rev = ""
+for c in str:
+  rev = c + rev
+
+
+#Reverse via  slice that steps backwards, -1.
+rev = str[::-1]
+
+#Reverse via Reversed function
+rev2 = ''.join(reversed(str))
+
+#Using Stack
+rev=""
+stack = list(str)
+for i in range(0, 5):
+  rev = rev+stack.pop()
