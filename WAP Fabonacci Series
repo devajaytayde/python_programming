@@ -1,12 +1,14 @@
+#0, 1, 1, 2, 3, 5, 8, 13, 2
+Time, Auxilary Space  Complexity
 
 #Using iteration with only two variables
 a, b = 0, 1
-print(a)
-for i in range(10):
-  print(a)
-... for _ in range(n):
-...     print(a, end=" ")
-...     a, b = b, a + b
+for _ in range(n):
+  print(a, end=" ")
+  a, b = b, a + b
+
+O(N), O(1)
+
 
 #Using iteration with three variables
 a, b = 0, 1
@@ -15,4 +17,15 @@ for i in range(10):
   sum = a  + b
   a = b
   b = sum
+O(N), O(1)
 
+#Using Recursion
+def fab(n):
+  if n<=1:
+    return n;
+  return fab(n-1) + fab(n-2)
+
+for i in range(10):
+  fab(i)
+
+O(2pow(N)), 0(N)
