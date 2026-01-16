@@ -1,0 +1,11 @@
+def Palandrome(str):
+...   bPalandrome = True
+...   chrarr = list(str)
+...   for i in range(len(chrarr)):
+...     if(chrarr[i]!=chrarr[len(chrarr)-1-i]):
+...       bPalandrome = False
+...   if bPalandrome == True:
+...     print("String", str, "is Palandrome")
+...   else:
+...     print("String", str, "is Not Palandrome")
+
