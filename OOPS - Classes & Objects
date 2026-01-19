@@ -9,7 +9,16 @@ class demo:
 demo.func("ABCD")
 ABCD
 
-or 
-myobj = demo()
+nor 
+myobj = demo()      --> It will not work, as we didn't pass Python instance into class, as Python need Clarity to know which instance belong which Class (Note: Not for Static/Class varibale)
 myobj.func()
 
+or
+class demo:
+  def func(self,var):  
+    print(variable)
+
+demo.func("ABCD")
+ABCD
+
+#
