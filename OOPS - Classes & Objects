@@ -1,0 +1,15 @@
+#Classes -
+class demo:
+  def func(variable):
+  print(variable)
+
+
+
+#Object - 
+demo.func("ABCD")
+ABCD
+
+or 
+myobj = demo()
+myobj.func()
+
